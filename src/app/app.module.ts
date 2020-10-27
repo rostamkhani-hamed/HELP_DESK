@@ -8,6 +8,14 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { LoginPageComponent } from './login-page/login-page.component';
 
+
+import { HttpClientModule } from '@angular/common/http';
+
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +26,10 @@ import { LoginPageComponent } from './login-page/login-page.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }
