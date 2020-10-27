@@ -1,0 +1,28 @@
+.background{
+    background-image: url('/assets/Images/back.jpg');
+    background-position:center;
+    background-size: cover;
+    height: 100%;
+}
+.imgStyle{
+    box-shadow: 10px 10px 80px 15px black, 10px 10px 100px 10px black;
+    margin-top: 10% !important;
+    border-radius: 50%;
+    
+}
+
+input{
+    font-family: iranSans;
+    font-size: 20px;
+    height: 200%;
+    box-shadow: 10px 10px 80px 15px white, 10px 10px 100px 1px orange;
+    margin-top: 5%;
+}
+span{
+    font-family: iranSans;
+}
+button{
+    box-shadow: 10px 10px 80px 15px white, 10px 10px 100px 1px orange;
+    width: 100%;
+    
+}
