@@ -10,6 +10,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
+import { HomePageComponent } from './home-page/home-page.component';
+
 
 
 
@@ -19,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
