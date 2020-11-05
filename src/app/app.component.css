@@ -9,6 +9,6 @@
 .background{
     background-image: url('/assets/Images/back.jpg');
     background-position:center;
-    background-size: cover;
-    height: 100%;
+    background-size: contain;
+    /* height: 100%; */
 }

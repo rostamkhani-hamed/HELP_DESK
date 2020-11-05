@@ -1,0 +1,26 @@
+
+.background{
+    box-shadow: 10px 10px 80px 1px black, 10px 10px 100px 1px black;
+    margin-top: 30% !important;
+    height: 60%;
+    background-color: slateblue;
+    /* border-radius: 10%; */
+}
+
+span{
+    font-family: iranSans;
+    font-size: 24px;
+}
+button{
+    box-shadow: 10px 10px 80px 15px white, 10px 10px 100px 1px orange;
+    width: 100%;
+    
+}
+label{
+    border: solid;
+    margin-top: 20%;
+    height: 60%;
+}
+.labelDetail{
+    width: 40%;
+}
