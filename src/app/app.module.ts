@@ -12,6 +12,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MemberUnblockingComponent } from './member-unblocking/member-unblocking.component';
+import { GetMemberDataComponent } from './get-member-data/get-member-data.component';
 
 
 
@@ -24,7 +25,8 @@ import { MemberUnblockingComponent } from './member-unblocking/member-unblocking
     AppComponent,
     LoginPageComponent,
     HomePageComponent,
-    MemberUnblockingComponent
+    MemberUnblockingComponent,
+    GetMemberDataComponent
   ],
   imports: [
     BrowserModule,

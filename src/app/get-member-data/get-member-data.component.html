@@ -1,0 +1,246 @@
+<div class="container" dir="rtl">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">نام
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #iname disabled value="{{this.muc.param[0].NAME}}">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">نام خانوادگی
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #ilastname disabled value="{{this.muc.param[0].FAMILY}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- انتهای سطر اول -->
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">کد ملی
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #imelicode disabled value="{{this.muc.param[0].NATIONAL_CODE}}">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">تاریخ عضویت
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #ijoindate disabled value="{{this.muc.param[0].JOIN_DATE}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- انتهای سطر دوم -->
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">نام پدر
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #ifathername disabled value="{{this.muc.param[0].FATHER_NAME}}">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">شماره شناسنامه
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #idnumber disabled value="{{this.muc.param[0].IDENTITY_CODE}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- انتهای سطر سوم -->
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">سوال امنیتی
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #isecquestion disabled value="{{this.muc.param[0].SECURITY_QUESTION}}">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;"> مجموع امتیاز ها
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #itotalpoint disabled value="{{this.muc.param[0].TOTAL_REMAIN_POINT}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- انتهای سطر چهارم -->
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">تعداد تغییر رمز
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #ichangepassattempt disabled value="{{this.muc.param[0].CHANGE_PASS_ATTEMPT}}">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">فعال؟
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #iactive disabled value="{{this.muc.param[0].IS_ACTIVE}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- انتهای سطر پنجم -->
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">حذف شده
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #ideleted disabled value="{{this.muc.param[0].IS_DELETED}}">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">غیر فعال شده
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #ilocked disabled value="{{this.muc.param[0].IS_LOCKED}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- انتهای سطر ششم -->
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">ایمیل
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #iemail disabled value="{{this.muc.param[0].EMAIL_ADDRESS}}">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">تاریخ آخرین ورود
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #ilastlogindate disabled value="{{this.muc.param[0].LAST_LOGIN_DATE}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- انتهای سطر هفتم -->
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">تلفن
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #itel disabled value="{{this.muc.param[0].ENTITY_TEL}}">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">کد پستی
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #ipostalcode disabled value="{{this.muc.param[0].ENTITY_POSTAL_CODE}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- انتهای سطر هشتم -->
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">ورود نا موفق
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
+                    <input type="text" #iloginfailed disabled value="{{this.muc.param[0].LOGIN_FAILED_ATTEMPT}}">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
+            <div class="row" dir="rtl" style="vertical-align: middle;">
+
+                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
+                    <label style="padding-top: 6%;">شماره کارت
+                    </label>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle; margin-bottom: 10%;">
+                    <input type="text" #icardno disabled value="{{this.muc.param[0].BANK_CARD_NO}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- انتهای سطر هشتم -->
+    
+</div>

@@ -1,245 +1,27 @@
 <div class="container" dir="rtl">
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">نام
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #iname disabled value="dsdsdd">
-                </div>
-            </div>
+    <div class="row" style="padding-top: 10%;">
+        <div class="col-sm-6 col-md-6 col-lg-6 divCol">
+            <button class="nav-item" mat-raised-button color="primary"
+                (click)="this.showPersoneDetail('helpdesk/members/getmemberinfo.zjs',imobile.value)">
+                <span>بررسی</span>
+            </button>
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">نام خانوادگی
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ilastname disabled value="dsdsdd">
-                </div>
-            </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 divCol">
+            <input type="text" #imobile placeholder="شماره موبایل را وارد نمایید">
         </div>
     </div>
-    <!-- انتهای سطر اول -->
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">کد ملی
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #imelicode disabled value="dsdsdd">
-                </div>
-            </div>
+    <div class="container" *ngIf="this.result == 2">
+        <div class="row">
+            <app-get-member-data #openDetail></app-get-member-data>
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">تاریخ عضویت
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ijoindate disabled value="dsdsdd">
-                </div>
+        <div class="row" style="padding-top: 10%;">
+            <div class="col-sm-12 col-md-12 col-lg-12 divCol">
+                <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
+                (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
+                    <span>رفع مسدودی</span>
+                </button>
             </div>
+            <!-- دکمه رفع مسدودی  -->
         </div>
     </div>
-    <!-- انتهای سطر دوم -->
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">نام پدر  
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ifathername disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">شماره شناسنامه    
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #idnumber disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- انتهای سطر سوم -->
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">سوال امنیتی
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #isecquestion disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;"> مجموع امتیاز ها
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #itotalpoint disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- انتهای سطر چهارم -->
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">تعداد تغییر رمز 
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ichangepassattempt disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">فعال؟  
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #iactive disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- انتهای سطر پنجم -->
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">حذف شده 
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ideleted disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">غیر فعال شده  
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ilocked disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- انتهای سطر ششم -->
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">ایمیل
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #iemail disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">تاریخ آخرین ورود
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ilastlogindate disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- انتهای سطر هفتم -->
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">تلفن   
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #itel disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">کد پستی      
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ipostalcode disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- انتهای سطر هشتم -->
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">ورود نا موفق   
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #iloginfailed disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 divRow">
-            <div class="row" dir="rtl" style="vertical-align: middle;">
-
-                <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">شماره کارت       
-                    </label>
-                </div>
-                <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #icardno disabled value="dsdsdd">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- انتهای سطر هشتم -->
 </div>

@@ -30,7 +30,7 @@ rs : number;
 } 
 
   callLoginService(username:string , password:string){
-    var result = [];
+
     var apiResult;
     var jsonParam =  {  username: username  , password: password } ;
 
@@ -55,7 +55,7 @@ rs : number;
   }
   calltestGetservice(path:string){ 
     var apiResult;
-    apiResult = this.rc.callGetApi(path);
+    apiResult = this.rc.callApi('GET',path,'');
     apiResult.forEach(element => {  
       console.log(element);
             });
@@ -65,8 +65,6 @@ rs : number;
     var arrayLenght = result.length;
     for( var i = 0 ; i < arrayLenght ; i++){
         param[i] = result[i];
-        console.log(param[i]);
-        console.log(param[i].message);
     }
     var messageValue = Number(param[0].message);
     if (messageValue > 0){
