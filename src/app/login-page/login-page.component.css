@@ -8,16 +8,19 @@
 
 input{
     font-family: iranSans;
-    font-size: 20px;
+    font-size: 22px;
     height: 200%;
     box-shadow: 10px 10px 80px 15px white, 10px 10px 100px 1px orange;
     margin-top: 5%;
+    text-align: center;
 }
 span{
     font-family: iranSans;
+    font-size: 22px;
 }
 button{
     box-shadow: 10px 10px 80px 15px white, 10px 10px 100px 1px orange;
     width: 100%;
+    margin-bottom: 100%;
     
 }

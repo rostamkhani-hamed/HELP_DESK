@@ -9,14 +9,17 @@
     text-align: center;
     border-radius: 20px;
     margin-top: 5%;
+    font-weight: bold;
 }
 .divCol{
-    border-radius: 20%;
+    border-radius: 28%;
 }
 input{
     font-family: iranSans;
     font-size: 14px;
     width: 100%;
+    text-align: center;
+    font-weight: bold;
 }
 button{
     box-shadow: 10px 10px 80px 15px white, 10px 10px 100px 1px orange;
@@ -25,7 +28,7 @@ button{
 }
 label{
     font-family: iranSans;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
 }
 

@@ -10,14 +10,17 @@
             <input type="text" #imobile placeholder="شماره موبایل را وارد نمایید">
         </div>
     </div>
-    <div class="container" *ngIf="this.result == 2">
-        <div class="row">
-            <app-get-member-data #openDetail></app-get-member-data>
+
+    <div *ngIf="this.result == 2">
+        <div class="row" *ngIf="this.result == 2">
+            <div class="col-sm-12 col-md-12 col-lg-12 divCol">
+                <app-get-member-data #openDetail></app-get-member-data>
+            </div>
         </div>
         <div class="row" style="padding-top: 10%;">
             <div class="col-sm-12 col-md-12 col-lg-12 divCol">
                 <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
-                (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
+                    (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
                     <span>رفع مسدودی</span>
                 </button>
             </div>

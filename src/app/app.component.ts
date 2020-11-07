@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; 
+
 
 @Component({
   selector: 'app-root',
@@ -13,12 +13,6 @@ export class AppComponent {
 
 export class getIp{
   constructor (){
-    this.url = '172.30.21.35:9005/TARAETEBAR/';
   }
-  set url(url){
-    this.url = url;
-  }
-  get url(){
-    return this.url;
-  }
+
 }
