@@ -8,7 +8,7 @@ import {MemberUnblockingComponent} from '../member-unblocking/member-unblocking.
 })
 export class GetMemberDataComponent implements OnInit {
 
-  constructor(private muc : MemberUnblockingComponent) { }
+  constructor( public muc : MemberUnblockingComponent) { }
 
   ngOnInit(): void {
   }

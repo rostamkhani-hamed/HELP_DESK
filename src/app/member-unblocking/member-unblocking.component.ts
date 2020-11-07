@@ -31,6 +31,7 @@ result ;
     apiResultForUnblocking.forEach(element => {this.showResultForUnblocking(element);
             });
   }
+  // ============================================================================================
   showResultForMemberInfo(elemnt){
     
     var arrayLenght = elemnt.length;
