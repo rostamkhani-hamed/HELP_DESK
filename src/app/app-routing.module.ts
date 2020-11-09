@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { MemberUnblockingComponent } from './member-unblocking/member-unblocking.component';
 import { GetMemberDataComponent } from './get-member-data/get-member-data.component';
+import { CheckMobileComponent } from './check-mobile/check-mobile.component';
 
 const routes: Routes = 
 [
@@ -14,9 +14,9 @@ const routes: Routes =
   ,
   { path: 'HomePage', component: HomePageComponent }
   ,
-  { path: 'MemberUnblocking', component: MemberUnblockingComponent }
-  ,
   { path: 'GetMemberData', component: GetMemberDataComponent }
+  ,
+  { path: 'CheckMobile', component: CheckMobileComponent }
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MemberUnblockingComponent} from '../member-unblocking/member-unblocking.component';
+import {CheckMobileComponent} from '../check-mobile/check-mobile.component';
 
 @Component({
   selector: 'app-get-member-data',
@@ -8,7 +8,7 @@ import {MemberUnblockingComponent} from '../member-unblocking/member-unblocking.
 })
 export class GetMemberDataComponent implements OnInit {
 
-  constructor( public muc : MemberUnblockingComponent) { }
+  constructor( public cm : CheckMobileComponent) { }
 
   ngOnInit(): void {
   }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MemberUnblockingComponent } from './member-unblocking.component';
+import { CheckMobileComponent } from './check-mobile.component';
 
-describe('MemberUnblockingComponent', () => {
-  let component: MemberUnblockingComponent;
-  let fixture: ComponentFixture<MemberUnblockingComponent>;
+describe('CheckMobileComponent', () => {
+  let component: CheckMobileComponent;
+  let fixture: ComponentFixture<CheckMobileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MemberUnblockingComponent ]
+      declarations: [ CheckMobileComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MemberUnblockingComponent);
+    fixture = TestBed.createComponent(CheckMobileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,4 +1,4 @@
-<div class="container" dir="rtl">
+<div class="container" dir="rtl" style=" background-size:contain !important">
     <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6 divRow">
             <div class="row" dir="rtl" style="vertical-align: middle;">
@@ -8,7 +8,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #iname disabled value="{{this.muc.param[0].NAME}}">
+                    <input type="text" #iname disabled value="{{this.cm.param[0].NAME}}">
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ilastname disabled value="{{this.muc.param[0].FAMILY}}">
+                    <input type="text" #ilastname disabled value="{{this.cm.param[0].FAMILY}}">
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #imelicode disabled value="{{this.muc.param[0].NATIONAL_CODE}}">
+                    <input type="text" #imelicode disabled value="{{this.cm.param[0].NATIONAL_CODE}}">
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ijoindate disabled value="{{this.muc.param[0].JOIN_DATE}}">
+                    <input type="text" #ijoindate disabled value="{{this.cm.param[0].JOIN_DATE}}">
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ifathername disabled value="{{this.muc.param[0].FATHER_NAME}}">
+                    <input type="text" #ifathername disabled value="{{this.cm.param[0].FATHER_NAME}}">
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #idnumber disabled value="{{this.muc.param[0].IDENTITY_CODE}}">
+                    <input type="text" #idnumber disabled value="{{this.cm.param[0].IDENTITY_CODE}}">
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #isecquestion disabled value="{{this.muc.param[0].SECURITY_QUESTION}}">
+                    <input type="text" #isecquestion disabled value="{{this.cm.param[0].SECURITY_QUESTION}}">
                 </div>
             </div>
         </div>
@@ -101,7 +101,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #itotalpoint disabled value="{{this.muc.param[0].TOTAL_REMAIN_POINT}}">
+                    <input type="text" #itotalpoint disabled value="{{this.cm.param[0].TOTAL_REMAIN_POINT}}">
                 </div>
             </div>
         </div>
@@ -116,7 +116,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ichangepassattempt disabled value="{{this.muc.param[0].CHANGE_PASS_ATTEMPT}}">
+                    <input type="text" #ichangepassattempt disabled value="{{this.cm.param[0].CHANGE_PASS_ATTEMPT}}">
                 </div>
             </div>
         </div>
@@ -128,7 +128,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #iactive disabled value="{{this.muc.param[0].IS_ACTIVE}}">
+                    <input type="text" #iactive disabled value="{{this.cm.param[0].IS_ACTIVE}}">
                 </div>
             </div>
         </div>
@@ -143,7 +143,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ideleted disabled value="{{this.muc.param[0].IS_DELETED}}">
+                    <input type="text" #ideleted disabled value="{{this.cm.param[0].IS_DELETED}}">
                 </div>
             </div>
         </div>
@@ -151,11 +151,13 @@
             <div class="row" dir="rtl" style="vertical-align: middle;">
 
                 <div class="col-sm-5 col-md-5 col-lg-5 divCol" style="vertical-align: middle;">
-                    <label style="padding-top: 6%;">غیر فعال شده
+                    <label style="padding-top: 6%;">مسدود شده
+
+                        
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ilocked disabled value="{{this.muc.param[0].IS_LOCKED}}">
+                    <input type="text" #ilocked disabled value="{{this.cm.param[0].IS_LOCK}}">
                 </div>
             </div>
         </div>
@@ -170,7 +172,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #iemail disabled value="{{this.muc.param[0].EMAIL_ADDRESS}}">
+                    <input type="text" #iemail disabled value="{{this.cm.param[0].EMAIL_ADDRESS}}">
                 </div>
             </div>
         </div>
@@ -182,7 +184,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ilastlogindate disabled value="{{this.muc.param[0].LAST_LOGIN_DATE}}">
+                    <input type="text" #ilastlogindate disabled value="{{this.cm.param[0].LAST_LOGIN_DATE}}">
                 </div>
             </div>
         </div>
@@ -197,7 +199,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #itel disabled value="{{this.muc.param[0].ENTITY_TEL}}">
+                    <input type="text" #itel disabled value="{{this.cm.param[0].ENTITY_TEL}}">
                 </div>
             </div>
         </div>
@@ -209,7 +211,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #ipostalcode disabled value="{{this.muc.param[0].ENTITY_POSTAL_CODE}}">
+                    <input type="text" #ipostalcode disabled value="{{this.cm.param[0].ENTITY_POSTAL_CODE}}">
                 </div>
             </div>
         </div>
@@ -224,7 +226,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle;">
-                    <input type="text" #iloginfailed disabled value="{{this.muc.param[0].LOGIN_FAILED_ATTEMPT}}">
+                    <input type="text" #iloginfailed disabled value="{{this.cm.param[0].LOGIN_FAILED_ATTEMPT}}">
                 </div>
             </div>
         </div>
@@ -236,7 +238,7 @@
                     </label>
                 </div>
                 <div class="col-sm-7 col-md-7 col-lg-7 divCol" style="vertical-align: middle; margin-bottom: 10%;">
-                    <input type="text" #icardno disabled value="{{this.muc.param[0].BANK_CARD_NO}}">
+                    <input type="text" #icardno disabled value="{{this.cm.param[0].BANK_CARD_NO}}">
                 </div>
             </div>
         </div>

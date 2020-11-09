@@ -1,0 +1,28 @@
+.divCol{
+    border-radius: 20%;
+    margin-top: 10%;
+}
+input{
+    font-family: iranSans;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    height: 100%;
+}
+button{
+    box-shadow: 10px 10px 80px 15px white, 10px 10px 100px 1px orange;
+    width: 100%;
+    
+}
+label{
+    font-family: iranSans;
+    font-size: 24px;
+    font-weight: bold;
+}
+span{
+    font-family: iranSans;
+    font-size: 18px;
+    font-weight: bold;
+}
+

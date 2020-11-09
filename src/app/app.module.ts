@@ -7,12 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { LoginPageComponent } from './login-page/login-page.component';
-
-
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
-import { MemberUnblockingComponent } from './member-unblocking/member-unblocking.component';
 import { GetMemberDataComponent } from './get-member-data/get-member-data.component';
+import { CheckMobileComponent } from './check-mobile/check-mobile.component';
 
 
 
@@ -25,8 +23,8 @@ import { GetMemberDataComponent } from './get-member-data/get-member-data.compon
     AppComponent,
     LoginPageComponent,
     HomePageComponent,
-    MemberUnblockingComponent,
-    GetMemberDataComponent
+    GetMemberDataComponent,
+    CheckMobileComponent
   ],
   imports: [
     BrowserModule,

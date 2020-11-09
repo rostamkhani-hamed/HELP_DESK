@@ -18,13 +18,26 @@
             </div>
         </div>
         <div class="row" style="padding-top: 10%;">
-            <div class="col-sm-12 col-md-12 col-lg-12 divCol">
+            <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 1">
                 <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
                     (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
                     <span>رفع مسدودی</span>
                 </button>
             </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 2">
+                <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
+                    (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
+                    <span>ارسال رمز کاربران</span>
+                </button>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 3">
+                <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
+                    (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
+                    <span>ارسال رمز فروشندگان</span>
+                </button>
+            </div>
             <!-- دکمه رفع مسدودی  -->
+            <!-- *ngIf="this.hp.refNo == 3" -->
         </div>
     </div>
 </div>

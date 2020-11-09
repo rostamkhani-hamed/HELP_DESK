@@ -13,8 +13,9 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToUnblockingPage(){
-    this.router.navigateByUrl('/MemberUnblocking', { skipLocationChange: true });
+  goForCheckMobile(ref){
+    localStorage.setItem('refNo',ref);
+    this.router.navigateByUrl('/CheckMobile', { skipLocationChange: true });
   }
 
 }

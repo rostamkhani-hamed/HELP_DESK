@@ -6,10 +6,12 @@
         url('/assets/Fonts/woff/IRANSansWeb(FaNum).woff') format('woff'),
         url('/assets/Fonts/woff2/IRANSansWeb(FaNum).woff2') format('woff2');
 }
+
 .background{
     background-image: url('/assets/Images/back.jpg');
     background-position:center;
     background-size: cover;
+    height: -webkit-fill-available;
     /* height: 100%; */
     /* z-index: auto; */
     /* position:absolute;  */
