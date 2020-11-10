@@ -158,6 +158,8 @@ export class CheckMobileComponent implements OnInit {
      
     if (arrayLenght > 0 && msg != "EXECUTE SUCCESS") {
       alert(this.param[0].NAME);
+      this.result = this.param[0].RESULT;
+      
       // this.router.navigateByUrl('/GetMemberData', { skipLocationChange: true });
     }
     else {

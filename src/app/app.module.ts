@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
 import { GetMemberDataComponent } from './get-member-data/get-member-data.component';
 import { CheckMobileComponent } from './check-mobile/check-mobile.component';
+import { GetShopDataComponent } from './get-shop-data/get-shop-data.component';
 
 
 
@@ -24,7 +25,8 @@ import { CheckMobileComponent } from './check-mobile/check-mobile.component';
     LoginPageComponent,
     HomePageComponent,
     GetMemberDataComponent,
-    CheckMobileComponent
+    CheckMobileComponent,
+    GetShopDataComponent
   ],
   imports: [
     BrowserModule,

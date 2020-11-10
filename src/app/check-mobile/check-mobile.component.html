@@ -34,10 +34,13 @@
         </div>
     </div>
 
-    <div *ngIf="this.result == 2">
+    <div *ngIf="this.result == 2 ">
         <div class="row" *ngIf="this.result == 2">
-            <div class="col-sm-12 col-md-12 col-lg-12 divCol">
+            <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo != 3">
                 <app-get-member-data #openDetail></app-get-member-data>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 3">
+                <app-get-shop-data #openDetail></app-get-shop-data>
             </div>
         </div>
         <div class="row" style="padding-top: 10%;">
