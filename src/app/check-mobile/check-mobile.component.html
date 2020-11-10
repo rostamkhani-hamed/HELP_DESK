@@ -1,13 +1,36 @@
 <div class="container" dir="rtl">
     <div class="row" style="padding-top: 10%;">
+
         <div class="col-sm-6 col-md-6 col-lg-6 divCol">
+            <input type="text" #imobile placeholder="شماره موبایل را وارد نمایید">
+        </div>
+
+
+        <div class="col-sm-6 col-md-6 col-lg-6 divCol" *ngIf="this.refNo != 3">
             <button class="nav-item" mat-raised-button color="primary"
                 (click)="this.showPersoneDetail('helpdesk/members/getmemberinfo.zjs',imobile.value)">
                 <span>بررسی</span>
             </button>
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 divCol">
-            <input type="text" #imobile placeholder="شماره موبایل را وارد نمایید">
+
+
+        <div class="col-sm-6 col-md-6 col-lg-6 divCol" *ngIf="this.refNo == 3">
+            <button class="nav-item" mat-raised-button color="primary"
+                (click)="this.showShopCash('helpdesk/shop/getcashdesk.zjs',imobile.value)">
+                <span>بررسی</span>
+            </button>
+        </div>
+
+    </div>
+
+
+    <div class="row" *ngIf="this.refNo == 3 && this.shopCashDeskCount > 0;">
+        <div class="col-sm-12 col-md-12 col-lg-12 divCol">
+            <label >صندوق ها</label>
+            <select #cashDesk (change)="this.getShopInfo('helpdesk/shop/getshopinfo.zjs',cashDesk.value)">
+                <option  value="">-</option>
+                <option  *ngFor="let item of this.param" value="{{item.CASH_DESK_ID}}" >{{item.CASH_DESK_NO}}</option>
+            </select>
         </div>
     </div>
 
@@ -26,13 +49,13 @@
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 2">
                 <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
-                    (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
+                    (click)="this.goForMemberPassSend('helpdesk/smspass/sendingmemberpasswordsms.zjs',imobile.value)">
                     <span>ارسال رمز کاربران</span>
                 </button>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 3">
                 <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
-                    (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
+                    (click)="this.goForShopPassSend('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
                     <span>ارسال رمز فروشندگان</span>
                 </button>
             </div>

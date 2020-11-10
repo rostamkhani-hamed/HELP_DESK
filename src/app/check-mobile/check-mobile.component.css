@@ -17,12 +17,27 @@ button{
 }
 label{
     font-family: iranSans;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 span{
     font-family: iranSans;
     font-size: 18px;
     font-weight: bold;
+}
+select{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-family: iranSans;
+    font-size: 30px;
+}
+div{
+    text-align: center;
+}
+option{
+    font-family: iranSans;
+    font-size: 18px;
+    text-align: center;
 }
 
