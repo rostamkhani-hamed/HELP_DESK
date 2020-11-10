@@ -58,7 +58,7 @@
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 3">
                 <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
-                    (click)="this.goForShopPassSend('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
+                    (click)="this.goForShopPassSend('helpdesk/shop/shoppasssend.zjs',imobile.value,this.param[0].NAME)">
                     <span>ارسال رمز فروشندگان</span>
                 </button>
             </div>

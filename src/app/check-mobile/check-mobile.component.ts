@@ -122,10 +122,10 @@ export class CheckMobileComponent implements OnInit {
       this.param[i] = elemnt[i];
     }
     var msg;
-    try{
+    try {
       msg = elemnt[0].MSG.trim();
-    }catch(e){}
-     
+    } catch (e) { }
+
     if (arrayLenght > 0 && msg != "EXECUTE SUCCESS") {
       this.shopCashDeskCount = arrayLenght;
       // this.router.navigateByUrl('/GetMemberData', { skipLocationChange: true });
@@ -146,20 +146,19 @@ export class CheckMobileComponent implements OnInit {
       this.showForShopInfoByCashDeskNo(element);
     });
   }
-  showForShopInfoByCashDeskNo(elemnt){
+  showForShopInfoByCashDeskNo(elemnt) {
     var arrayLenght = elemnt.length;
     for (var i = 0; i < arrayLenght; i++) {
       this.param[i] = elemnt[i];
     }
     var msg;
-    try{
+    try {
       msg = elemnt[0].MSG.trim();
-    }catch(e){}
-     
+    } catch (e) { }
+
     if (arrayLenght > 0 && msg != "EXECUTE SUCCESS") {
-      alert(this.param[0].NAME);
       this.result = this.param[0].RESULT;
-      
+
       // this.router.navigateByUrl('/GetMemberData', { skipLocationChange: true });
     }
     else {
@@ -169,8 +168,31 @@ export class CheckMobileComponent implements OnInit {
   //=============================================================================================
   //******************************************************************************************* */
   //=============================================================================================
-  goForShopPassSend(path: string, casgDeskNo){
+  goForShopPassSend(path: string, mobile , shopName) {
+    var apiResultForPersoneData;
+    var json = { mobile: mobile , shopname : shopName };
+    apiResultForPersoneData = this.rc.callApi('POST', path, json);
+    apiResultForPersoneData.forEach(element => {
+      this.showForShopPassSend(element);
+    });
+  }
+  showForShopPassSend(elemnt) {
+    var arrayLenght = elemnt.length;
+    for (var i = 0; i < arrayLenght; i++) {
+      this.param[i] = elemnt[i];
+    }
+    var msg;
+    try {
+      msg = elemnt[0].MSG.trim();
+    } catch (e) { }
 
+    if (arrayLenght > 0 && msg != "EXECUTE SUCCESS" && this.param[0].RESULT == 1) {
+      alert('ارسال رمز با موفقیت انجام شد');
+      // this.router.navigateByUrl('/GetMemberData', { skipLocationChange: true });
+    }
+    else {
+      alert('بروز مشکل در گرفتن داده ها از سروز');
+    }
   }
 }
 
