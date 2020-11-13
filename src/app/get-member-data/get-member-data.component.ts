@@ -11,6 +11,8 @@ export class GetMemberDataComponent implements OnInit {
   constructor( public cm : CheckMobileComponent) { }
 
   ngOnInit(): void {
+    var el = document.getElementById("FirstDive");
+    el.style.backgroundRepeat = "repeat-y";
   }
 
 }

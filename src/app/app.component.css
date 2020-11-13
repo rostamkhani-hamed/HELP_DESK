@@ -8,11 +8,11 @@
 }
 
 .background{
-    background-image: url('/assets/Images/back.jpg');
+    background-image: url('/assets/Images/back3.jpg');
     background-position:center;
     background-size: cover;
     height: -webkit-fill-available;
-    /* height: 100%; */
+    height: 100%;
     /* z-index: auto; */
     /* position:absolute;  */
     /* top:0; 

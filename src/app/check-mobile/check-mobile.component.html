@@ -7,18 +7,14 @@
 
 
         <div class="col-sm-6 col-md-6 col-lg-6 divCol" *ngIf="this.refNo != 3">
-            <button class="nav-item" mat-raised-button color="primary"
+            <img src="/assets/Images/CheckButton.png" class="Imgbutton"
                 (click)="this.showPersoneDetail('helpdesk/members/getmemberinfo.zjs',imobile.value)">
-                <span>بررسی</span>
-            </button>
         </div>
 
 
         <div class="col-sm-6 col-md-6 col-lg-6 divCol" *ngIf="this.refNo == 3">
-            <button class="nav-item" mat-raised-button color="primary"
+            <img src="/assets/Images/CheckButton.png" class="Imgbutton"
                 (click)="this.showShopCash('helpdesk/shop/getcashdesk.zjs',imobile.value)">
-                <span>بررسی</span>
-            </button>
         </div>
 
     </div>
@@ -45,22 +41,16 @@
         </div>
         <div class="row" style="padding-top: 10%;">
             <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 1">
-                <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
+                <img src="/assets/Images/UnBlockButton.png" class="Imgbutton"
                     (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
-                    <span>رفع مسدودی</span>
-                </button>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 2">
-                <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
+                <img src="/assets/Images/MemberPassSendButton.png" class="Imgbutton"
                     (click)="this.goForMemberPassSend('helpdesk/smspass/sendingmemberpasswordsms.zjs',imobile.value)">
-                    <span>ارسال رمز کاربران</span>
-                </button>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 3">
-                <button class="nav-item" mat-raised-button color="primary" style="margin-bottom: 10%;"
+                <img src="/assets/Images/ShopPassSendButton.png" class="Imgbutton"
                     (click)="this.goForShopPassSend('helpdesk/shop/shoppasssend.zjs',imobile.value,this.param[0].NAME)">
-                    <span>ارسال رمز فروشندگان</span>
-                </button>
             </div>
             <!-- دکمه رفع مسدودی  -->
             <!-- *ngIf="this.hp.refNo == 3" -->
