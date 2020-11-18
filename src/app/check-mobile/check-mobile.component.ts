@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { RestCaller } from '../rest-caller';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-check-mobile',
@@ -15,7 +16,7 @@ export class CheckMobileComponent implements OnInit {
   result;
   refNo;
   shopCashDeskCount = 0;
-  constructor(private httpclient: HttpClient, private router: Router) { 
+  constructor(private httpclient: HttpClient, private router: Router, private toast:ToastrService) { 
   }
 
   ngOnInit(): void {
@@ -52,7 +53,8 @@ export class CheckMobileComponent implements OnInit {
       // this.router.navigateByUrl('/GetMemberData', { skipLocationChange: true });
     }
     else {
-      alert('شماره وارد شده، اشتباه است');
+      this.toast.error('شماره وارد شده، اشتباه است','',{
+      });
     }
 
   }
@@ -78,10 +80,12 @@ export class CheckMobileComponent implements OnInit {
     result = Number(param[0].RESULT);
 
     if (result == 1) {
-      alert('با موفقیت انجام شد');
+      this.toast.success('با موفقیت انجام شد','',{
+      });
     }
     else {
-      alert('بروز مشکل در رفع مسدودی کاربر');
+      this.toast.error('بروز مشکل در رفع مسدودی کاربر','',{
+      });
     }
 
   }
@@ -107,10 +111,12 @@ export class CheckMobileComponent implements OnInit {
     result = Number(param[0].MESSAGE);
 
     if (result == 1) {
-      alert('با موفقیت انجام شد');
+      this.toast.success('با موفقیت انجام شد','',{
+      });
     }
     else {
-      alert('بروز مشکل در ارسال رمز کاربر');
+      this.toast.error('بروز مشکل در ارسال رمز کاربر','',{
+      });
     }
   }
   //=============================================================================================
@@ -139,7 +145,8 @@ export class CheckMobileComponent implements OnInit {
       // this.router.navigateByUrl('/GetMemberData', { skipLocationChange: true });
     }
     else {
-      alert('شماره وارد شده، اشتباه است');
+      this.toast.error('شماره وارد شده اشتباه است','',{
+      });
     }
 
   }
@@ -170,7 +177,8 @@ export class CheckMobileComponent implements OnInit {
       // this.router.navigateByUrl('/GetMemberData', { skipLocationChange: true });
     }
     else {
-      alert('بروز مشکل در گرفتن داده ها از سروز');
+      this.toast.error('بروز مشکل در گرفتن داده ها از سروز','',{
+      });
     }
   }
   //=============================================================================================
@@ -195,11 +203,12 @@ export class CheckMobileComponent implements OnInit {
     } catch (e) { }
 
     if (arrayLenght > 0 && msg != "EXECUTE SUCCESS" && this.param[0].RESULT == 1) {
-      alert('ارسال رمز با موفقیت انجام شد');
-      
+      this.toast.success('ارسال رمز با موفقیت انجام شد','',{
+      });
     }
     else {
-      alert('بروز مشکل در گرفتن داده ها از سروز');
+      this.toast.error('بروز مشکل در گرفتن داده ها از سروز','',{
+      });
     }
   }
   //=============================================================================================

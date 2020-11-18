@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {RestCaller} from '../rest-caller'
 import {loginData} from '../Classes/loginResult'
 import { Router } from '@angular/router'; 
+import { ToastrService } from 'ngx-toastr';
 
 
 
@@ -16,7 +17,7 @@ export class LoginPageComponent implements OnInit {
 rc : RestCaller;
 ld : loginData;
 rs : number;
-  constructor(public hc : HttpClient , private router: Router){
+  constructor(public hc : HttpClient , private router: Router , private toast:ToastrService){
 
   }
   
@@ -70,10 +71,10 @@ rs : number;
     }
     var messageValue = Number(param[0].message);
     if (messageValue > 0){
-        alert('Login Success');
         this.onSubmit();
       }else{
-        alert('Login Failed');
+        this.toast.error('نام کاربری یا رمز عبور اشتباه است','',{
+        });
       } 
 
 }

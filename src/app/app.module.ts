@@ -13,6 +13,8 @@ import { GetMemberDataComponent } from './get-member-data/get-member-data.compon
 import { CheckMobileComponent } from './check-mobile/check-mobile.component';
 import { GetShopDataComponent } from './get-shop-data/get-shop-data.component';
 import {MatIconModule} from '@angular/material/icon';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 
@@ -37,7 +39,13 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true,
+      closeButton : false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent] 
