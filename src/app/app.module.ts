@@ -12,6 +12,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { GetMemberDataComponent } from './get-member-data/get-member-data.component';
 import { CheckMobileComponent } from './check-mobile/check-mobile.component';
 import { GetShopDataComponent } from './get-shop-data/get-shop-data.component';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 
@@ -34,7 +36,8 @@ import { GetShopDataComponent } from './get-shop-data/get-shop-data.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent] 

@@ -15,11 +15,19 @@ export class CheckMobileComponent implements OnInit {
   result;
   refNo;
   shopCashDeskCount = 0;
-  constructor(private httpclient: HttpClient, private router: Router) { }
+  constructor(private httpclient: HttpClient, private router: Router) { 
+  }
 
   ngOnInit(): void {
     this.refNo = localStorage.getItem('refNo');
     this.rc = new RestCaller(this.httpclient);
+
+    var sessionVlaue = this.rc.callApi('GET','helpdesk/members/checkactivesession.zjs','');
+    sessionVlaue.forEach(element => {
+      if (element[0].ACTIVE == 'FALSE'){
+        this.router.navigateByUrl('/LoginPage', { skipLocationChange: true });
+      };
+    });
   }
   //=============================================================================================
   //******************************************************************************************* */
@@ -188,11 +196,17 @@ export class CheckMobileComponent implements OnInit {
 
     if (arrayLenght > 0 && msg != "EXECUTE SUCCESS" && this.param[0].RESULT == 1) {
       alert('ارسال رمز با موفقیت انجام شد');
-      // this.router.navigateByUrl('/GetMemberData', { skipLocationChange: true });
+      
     }
     else {
       alert('بروز مشکل در گرفتن داده ها از سروز');
     }
+  }
+  //=============================================================================================
+  //******************************************************************************************* */
+  //=============================================================================================
+  goToHome(){
+    this.router.navigateByUrl('/HomePage', { skipLocationChange: true });
   }
 }
 
