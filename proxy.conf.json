@@ -1,6 +1,6 @@
 {
   "/HELP_DESK/": {
-    "target": "http://172.30.21.52:8080/HELP_DESK/",
+    "target": "http://127.0.0.1:9090/HELP_DESK/",
     "secure": false,
     "pathRewrite": {
       "^/HELP_DESK/": ""
