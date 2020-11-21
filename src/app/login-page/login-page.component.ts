@@ -24,12 +24,11 @@ rs : number;
 
   ngOnInit(): void {
     this.rc = new RestCaller(this.hc);
-    this.ld = new loginData();
 
     this.rc.callApi('GET','helpdesk/members/logout.zjs','').forEach(element => {});
   }
   onSubmit() {  
-    this.router.navigateByUrl('/HomePage', { skipLocationChange: true });
+    this.router.navigateByUrl('/Validation', { skipLocationChange: true });
 } 
 
   callLoginService(username:string , password:string){

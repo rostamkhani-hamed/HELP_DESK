@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { GetMemberDataComponent } from './get-member-data/get-member-data.component';
 import { CheckMobileComponent } from './check-mobile/check-mobile.component';
+import { ValidationPageComponent } from './validation-page/validation-page.component';
 
 const routes: Routes = 
 [
@@ -17,6 +18,8 @@ const routes: Routes =
   { path: 'GetMemberData', component: GetMemberDataComponent }
   ,
   { path: 'CheckMobile', component: CheckMobileComponent }
+  ,
+  { path: 'Validation', component: ValidationPageComponent }
 ];
 
 @NgModule({

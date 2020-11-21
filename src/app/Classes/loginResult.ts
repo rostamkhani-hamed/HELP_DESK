@@ -1,5 +1,11 @@
 export class loginData{
     constructor(){}
+     set userId(userId){
+        this.userId = userId;
+    }
+    get userId (){
+        return this.userId;
+    }
     set username(username:string){
         this.username = username;
     }

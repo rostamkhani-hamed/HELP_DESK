@@ -14,6 +14,7 @@ import { CheckMobileComponent } from './check-mobile/check-mobile.component';
 import { GetShopDataComponent } from './get-shop-data/get-shop-data.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ToastrModule } from 'ngx-toastr';
+import { ValidationPageComponent } from './validation-page/validation-page.component';
 
 
 
@@ -30,7 +31,8 @@ import { ToastrModule } from 'ngx-toastr';
     HomePageComponent,
     GetMemberDataComponent,
     CheckMobileComponent,
-    GetShopDataComponent
+    GetShopDataComponent,
+    ValidationPageComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatIconModule,
     ToastrModule.forRoot({
       timeOut: 4000,
-      positionClass: 'toast-top-center',
+      positionClass: 'toast-top-full-width',
       preventDuplicates: true,
       closeButton : false
     })

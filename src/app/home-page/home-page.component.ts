@@ -18,10 +18,6 @@ export class HomePageComponent implements OnInit {
     sessionVlaue.forEach(element => {
       if (element[0].ACTIVE == 'FALSE'){
         this.router.navigateByUrl('/LoginPage', { skipLocationChange: true });
-        
-      }
-      else {
-        console.log(element[0].ACTIVE);
       }
     });
   }
@@ -29,6 +25,7 @@ export class HomePageComponent implements OnInit {
 
   goForCheckMobile(ref){
     this.router.navigateByUrl('/CheckMobile', { skipLocationChange: true });
+    localStorage.setItem('refNo',ref);
   }
   goToLogin(){
     this.router.navigateByUrl('/LoginPage', { skipLocationChange: true });
