@@ -21,6 +21,8 @@ input{
     width: 100%;
     text-align: center;
     font-weight: bold;
+    direction: ltr;
+    outline: none;
 }
 button{
     box-shadow: 10px 10px 80px 15px white, 10px 10px 100px 1px orange;

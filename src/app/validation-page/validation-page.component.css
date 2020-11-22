@@ -18,6 +18,8 @@ input{
     min-height: 100px !important;
     max-height: 100%;
     color: white;
+    direction: ltr;
+    outline: none;
     
 }
 span{
