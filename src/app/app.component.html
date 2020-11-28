@@ -1,8 +1,17 @@
-<div id="FirstDive" class="container background" dir="rtl">
+<div  class="container background" dir="rtl"
+    style="background-image: url(assets/Images/pending.gif); background-repeat: no-repeat; z-index: 100; position: fixed; background-size: 20%;">
+    <div class="row" dir="rtl">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            
+        </div>
+
+
+    </div>
+</div>
+<div id="FirstDive" class="container background" dir="rtl" style="z-index: -1;">
     <div class="row" dir="rtl">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <router-outlet></router-outlet>
         </div>
     </div>
-<!-- *ngIf="this.statusBar == 'true' " -->
 </div>
