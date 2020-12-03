@@ -8,12 +8,13 @@
 }
 
 .background{
-    background-image: url('/assets/Images/back3.jpg');
+    background-image: url('/assets/Images/back7.jpg');
     background-position:center;
     background-size: cover;
     height: -webkit-fill-available;
     height: 100%;
     overflow: auto;
+    padding-bottom: 5%;
     /* z-index: auto; */
     /* position:absolute;  */
     /* top:0; 

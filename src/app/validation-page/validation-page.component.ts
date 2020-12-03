@@ -12,9 +12,11 @@ import { ToastrService } from 'ngx-toastr';
 export class ValidationPageComponent implements OnInit {
   rc : RestCaller;
   captcha : string;
+  flag : boolean;
   constructor(public hc : HttpClient , private router: Router , private toast:ToastrService) { }
 
   ngOnInit(): void {
+    this.flag = false;
     this.rc = new RestCaller(this.hc);
     var sessionVlaue = this.rc.callApi('GET','helpdesk/members/checkactivesession.zjs','');
     sessionVlaue.forEach(element => {
@@ -36,12 +38,14 @@ export class ValidationPageComponent implements OnInit {
     this.captcha = param[0].CAPTCHA;
 }
 goAndCheckValidationData(captcha , otp){
+  this.flag = true;
   var json = {otpvalue : otp , captchavalue : captcha}; 
   var apiResult;
     apiResult = this.rc.callApi('POST','helpdesk/security/checkloginvalidation.zjs', json);
     apiResult.forEach(element => {this.validating(element)});
 }
 validating(result){
+  this.flag = false;
   var param = [];
   var arrayLenght = result.length;
   for( var i = 0 ; i < arrayLenght ; i++){

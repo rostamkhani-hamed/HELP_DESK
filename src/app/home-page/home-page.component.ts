@@ -11,8 +11,9 @@ import { RestCaller } from '../rest-caller';
 export class HomePageComponent implements OnInit {
   rc: RestCaller;
   constructor(private httpclient: HttpClient , private router : Router) { }
-
+  flag : boolean;
   ngOnInit(): void {
+    this.flag = false;
     this.rc = new RestCaller(this.httpclient);
     var sessionVlaue = this.rc.callApi('GET','helpdesk/members/checkactivesession.zjs','');
     sessionVlaue.forEach(element => {
@@ -26,9 +27,11 @@ export class HomePageComponent implements OnInit {
   goForCheckMobile(ref){
     this.router.navigateByUrl('/CheckMobile', { skipLocationChange: true });
     localStorage.setItem('refNo',ref);
+    this.flag = true;
   }
   goToLogin(){
     this.router.navigateByUrl('/LoginPage', { skipLocationChange: true });
+    this.flag = true;
   }
 
 }

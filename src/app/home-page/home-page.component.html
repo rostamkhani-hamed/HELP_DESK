@@ -9,20 +9,23 @@
     </div>
     <div class="row" > 
         <div class="col-sm-4 col-sm-4 col-sm-4">
-            <img src="/assets/Images/UnblockingButton.png" class="Imgbutton"
+            <img src="/assets/Images/UnblockingButton.png" class="Imgbutton" *ngIf="!this.flag"
             (click)="this.goForCheckMobile(1)">
+            <img src="/assets/Images/Pending.svg" class="Imgbutton" style="width: 50%;" *ngIf="this.flag">
                 
 
         </div>
         <div class="col-sm-4 col-sm-4 col-sm-4">
-            <img src="/assets/Images/MemberPassSendingButton.png" class="Imgbutton"
+            <img src="/assets/Images/MemberPassSendingButton.png" class="Imgbutton" *ngIf="!this.flag"
             (click)="this.goForCheckMobile(2)">
+            <img src="/assets/Images/Pending.svg" class="Imgbutton" style="width: 50%;" *ngIf="this.flag">
 
 
         </div>
         <div class="col-sm-4 col-sm-4 col-sm-4">
-            <img src="/assets/Images/ShopPassSendingButton.png" class="Imgbutton"
+            <img src="/assets/Images/ShopPassSendingButton.png" class="Imgbutton" *ngIf="!this.flag"
             (click)="this.goForCheckMobile(3)">
+            <img src="/assets/Images/Pending.svg" class="Imgbutton" style="width: 50%;" *ngIf="this.flag">
 
 
         </div>

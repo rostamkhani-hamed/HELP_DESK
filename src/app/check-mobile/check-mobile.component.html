@@ -16,13 +16,15 @@
 
         <div class="col-sm-6 col-md-6 col-lg-6 divCol" *ngIf="this.refNo != 3">
             <img src="/assets/Images/CheckButton.png" class="Imgbutton"
-                (click)="this.showPersoneDetail('helpdesk/members/getmemberinfo.zjs',imobile.value)">
+                (click)="this.showPersoneDetail('helpdesk/members/getmemberinfo.zjs',imobile.value)" *ngIf="!this.flag">
+                <img src="/assets/Images/Pending.svg" class="Imgbutton" style="width: 50%;" *ngIf="this.flag">
         </div>
 
 
         <div class="col-sm-6 col-md-6 col-lg-6 divCol" *ngIf="this.refNo == 3">
             <img src="/assets/Images/CheckButton.png" class="Imgbutton"
-                (click)="this.showShopCash('helpdesk/shop/getcashdesk.zjs',imobile.value)">
+                (click)="this.showShopCash('helpdesk/shop/getcashdesk.zjs',imobile.value)" *ngIf="!this.flag">
+                <img src="/assets/Images/Pending.svg" class="Imgbutton" style="width: 50%;" *ngIf="this.flag">
         </div>
 
     </div>
@@ -49,16 +51,19 @@
         </div>
         <div class="row" style="padding-top: 10%;">
             <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 1">
-                <img src="/assets/Images/UnBlockButton.png" class="Imgbutton"
-                    (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)">
+                <img src="/assets/Images/UnBlockButton.png" class="Imgbutton" *ngIf="!this.flag"
+                    (click)="this.goForUnblockingMember('helpdesk/members/unblockingmembers.zjs',this.param[0].TMID)" >
+                    <img src="/assets/Images/Pending.svg" class="Imgbutton" style="width: 50%;" *ngIf="this.flag">
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 2">
-                <img src="/assets/Images/MemberPassSendButton.png" class="Imgbutton"
-                    (click)="this.goForMemberPassSend('helpdesk/smspass/sendingmemberpasswordsms.zjs',imobile.value)">
+                <img src="/assets/Images/MemberPassSendButton.png" class="Imgbutton" *ngIf="!this.flag"
+                    (click)="this.goForMemberPassSend('helpdesk/smspass/sendingmemberpasswordsms.zjs',imobile.value)" >
+                    <img src="/assets/Images/Pending.svg" class="Imgbutton" style="width: 50%;" *ngIf="this.flag">
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 divCol" *ngIf="this.refNo == 3">
-                <img src="/assets/Images/ShopPassSendButton.png" class="Imgbutton"
-                    (click)="this.goForShopPassSend('helpdesk/shop/shoppasssend.zjs',imobile.value,this.param[0].NAME)">
+                <img src="/assets/Images/ShopPassSendButton.png" class="Imgbutton" *ngIf="!this.flag"
+                    (click)="this.goForShopPassSend('helpdesk/shop/shoppasssend.zjs',imobile.value,this.param[0].NAME)" >
+                    <img src="/assets/Images/Pending.svg" class="Imgbutton" style="width: 50%;" *ngIf="this.flag">
             </div>
             <!-- دکمه رفع مسدودی  -->
             <!-- *ngIf="this.hp.refNo == 3" -->

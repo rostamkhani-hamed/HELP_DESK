@@ -24,7 +24,7 @@
         </div>
       </div>
       <div>
-        <input #password type="password"  placeholder="گذر واژه" aria-label="Recipient's username"
+        <input #password type="password" placeholder="گذر واژه" aria-label="Recipient's username"
           aria-describedby="basic-addon2">
       </div>
     </div>
@@ -47,8 +47,9 @@
             <span>ورود</span>
           </button> -->
 
-          <img src="/assets/Images/NextStepButton.png" class="Imgbutton"
+          <img src="/assets/Images/NextStepButton.png" class="Imgbutton" *ngIf="!this.flag"
             (click)="this.callLoginService(username.value , password.value)">
+          <img src="/assets/Images/Pending.svg" class="Imgbutton" style="width: 50%;" *ngIf="this.flag">
 
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6">

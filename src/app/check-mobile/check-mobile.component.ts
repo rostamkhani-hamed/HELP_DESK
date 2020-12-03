@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./check-mobile.component.css']
 })
 export class CheckMobileComponent implements OnInit {
-
+  flag : boolean;
   rc: RestCaller;
   param = [];
   result;
@@ -20,6 +20,7 @@ export class CheckMobileComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    flag : Boolean;
     this.refNo = localStorage.getItem('refNo');
     this.rc = new RestCaller(this.httpclient);
 
@@ -34,6 +35,7 @@ export class CheckMobileComponent implements OnInit {
   //******************************************************************************************* */
   //=============================================================================================
   showPersoneDetail(path: string, mobileNo: string) {
+    this.flag = true;
     var apiResultForPersoneData;
     var json = { mobile: mobileNo };
     apiResultForPersoneData = this.rc.callApi('POST', path, json);
@@ -42,7 +44,7 @@ export class CheckMobileComponent implements OnInit {
     });
   }
   showResultForMemberInfo(elemnt) {
-
+    this.flag = false;
     var arrayLenght = elemnt.length;
     for (var i = 0; i < arrayLenght; i++) {
       this.param[i] = elemnt[i];
@@ -62,6 +64,7 @@ export class CheckMobileComponent implements OnInit {
   //******************************************************************************************* */
   //=============================================================================================
   goForUnblockingMember(path: string, tmid) {
+    this.flag = true;
     var apiResultForUnblocking;
     var json = { tara_member_id: tmid };
     apiResultForUnblocking = this.rc.callApi('POST', path, json);
@@ -70,6 +73,7 @@ export class CheckMobileComponent implements OnInit {
     });
   }
   showResultForUnblocking(elemnt) {
+    this.flag = false;
     var param = [];
     var result;
     var arrayLenght = elemnt.length;
@@ -94,6 +98,7 @@ export class CheckMobileComponent implements OnInit {
   //******************************************************************************************* */
   //=============================================================================================
   goForMemberPassSend(path: string, mobile) {
+    this.flag = true;
     var apiResultForUnblocking;
     var json = { mobile_number: mobile };
     apiResultForUnblocking = this.rc.callApi('POST', path, json);
@@ -102,6 +107,7 @@ export class CheckMobileComponent implements OnInit {
     });
   }
   showResultForMemberPassSend(elemnt) {
+    this.flag = false;
     var param = [];
     var result;
     var arrayLenght = elemnt.length;
@@ -123,6 +129,7 @@ export class CheckMobileComponent implements OnInit {
   //******************************************************************************************* */
   //=============================================================================================
   showShopCash(path: string, mobileNo: string) {
+    this.flag = true;
     var apiResultForPersoneData;
     var json = { mobile: mobileNo };
     apiResultForPersoneData = this.rc.callApi('POST', path, json);
@@ -131,6 +138,7 @@ export class CheckMobileComponent implements OnInit {
     });
   }
   showResultForcashInfo(elemnt) {
+    this.flag = false;
     var arrayLenght = elemnt.length;
     for (var i = 0; i < arrayLenght; i++) {
       this.param[i] = elemnt[i];
@@ -154,6 +162,7 @@ export class CheckMobileComponent implements OnInit {
   //******************************************************************************************* */
   //=============================================================================================
   getShopInfo(path: string, casgDeskNo) {
+    this.flag = true;
     var apiResultForPersoneData;
     var json = { cash_desk_no: casgDeskNo };
     apiResultForPersoneData = this.rc.callApi('POST', path, json);
@@ -162,6 +171,7 @@ export class CheckMobileComponent implements OnInit {
     });
   }
   showForShopInfoByCashDeskNo(elemnt) {
+    this.flag = false;
     var arrayLenght = elemnt.length;
     for (var i = 0; i < arrayLenght; i++) {
       this.param[i] = elemnt[i];
@@ -185,6 +195,7 @@ export class CheckMobileComponent implements OnInit {
   //******************************************************************************************* */
   //=============================================================================================
   goForShopPassSend(path: string, mobile , shopName) {
+    this.flag = true;
     var apiResultForPersoneData;
     var json = { mobile: mobile , shopname : shopName };
     apiResultForPersoneData = this.rc.callApi('POST', path, json);
@@ -193,6 +204,7 @@ export class CheckMobileComponent implements OnInit {
     });
   }
   showForShopPassSend(elemnt) {
+    this.flag = false;
     var arrayLenght = elemnt.length;
     for (var i = 0; i < arrayLenght; i++) {
       this.param[i] = elemnt[i];
